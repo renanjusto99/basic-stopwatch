@@ -1,0 +1,80 @@
+/* Definição das margins e paddings padrões do projeto */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do body */
+body{
+    background-color: black;
+    color: rgb(238, 238, 238);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo do container principal */
+.container{
+    display: flex;
+    padding: 20px;
+    border-radius: 50%;
+    border: 3px solid rgb(238, 238, 238);
+    margin: auto;
+    margin-top: 50px;
+    width: 350px;
+    height: 350px;
+    align-items: center;
+    
+}
+
+/* Estilo do visor do cronômetro */
+#relogio {
+    display: inline-block;
+    font-size: 70px;
+    transform: translate(30px, 0);
+}
+
+/* Estilo do container que contem os botões */
+.botoes{
+    display: flex;
+    width: 350px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* Estilo dos botões */
+button{
+    background-color: rgb(0, 175, 137);
+    color: rgb(238, 238, 238);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    height: 50px;
+    width: 90px;
+    margin: 30px 15px;
+
+}
+
+/* Estilo dos botões (mouse por cima) */
+button:hover{
+    background-color: rgb(236, 236, 236);
+    color: rgb(54, 133, 133);
+
+}
+
+/* keyframe responsável pela animação do cronômetro em caso de pausa */
+@keyframes blink-animation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Definição da animação do visor do cronômetro em caso de pausa */
+  .pausa {
+    animation: blink-animation 1s infinite;
+  }
